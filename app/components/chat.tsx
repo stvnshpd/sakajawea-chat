@@ -565,7 +565,7 @@ export function DeleteImageButton(props: { deleteImage: () => void }) {
   );
 }
 
-function _Chat() {
+function ChatComponent() {
   type RenderMessage = ChatMessage & { preview?: boolean };
 
   const chatStore = useChatStore();
@@ -1462,5 +1462,5 @@ function _Chat() {
 export function Chat() {
   const chatStore = useChatStore();
   const sessionIndex = chatStore.currentSessionIndex;
-  return <_Chat key={sessionIndex}></_Chat>;
+  return <ChatComponent key={sessionIndex}></ChatComponent>;
 }
